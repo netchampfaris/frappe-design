@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+frappe_design/docs/current
+node_modules
+style.dev.css
+style.prod.css
+index.build.*
