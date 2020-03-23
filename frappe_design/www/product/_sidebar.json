@@ -1,0 +1,16 @@
+[
+	{
+		"title": "Overview",
+		"route": "/product/overview"
+	},
+	{
+		"title": "Components",
+		"route": "/product/components",
+		"children": [
+			{
+				"title": "Button",
+				"route": "/product/components/button"
+			}
+		]
+	}
+]

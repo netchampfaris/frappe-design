@@ -1,0 +1,25 @@
+{
+	"name": "frappe_design",
+	"author": "Frappe Technologies <developers@frappe.io>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^2.1.0",
+		"cssnano": "^4.1.10",
+		"onchange": "^6.1.0",
+		"postcss-cli": "^7.1.0",
+		"postcss-import": "^12.0.1",
+		"postcss-nested": "^4.2.1",
+		"tailwindcss": "^1.2.0",
+		"vue": "^2.6.11"
+	},
+	"scripts": {
+		"build-dev-css": "yarn run postcss ./frappe_design/styles/index.css -o ./frappe_design/public/css/style.dev.css",
+		"build-prod-css": "FRAPPE_ENV=production yarn run postcss ./frappe_design/styles/index.css -o ./frappe_design/public/css/style.prod.css",
+		"develop": "onchange -i './tailwind.config.js' 'frappe_design/**/index.css' -- yarn build-dev-css",
+		"build": "yarn run build-prod-css"
+	}
+}

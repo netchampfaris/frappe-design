@@ -1,0 +1,3 @@
+{
+	"frappe_design/js/index.build.js": ["public/js/index.js"]
+}

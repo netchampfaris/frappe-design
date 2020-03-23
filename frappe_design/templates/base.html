@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%- block head -%}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="generator" content="frappe">
+        <title>
+            {%- block title -%}
+            {{ title + " - Frappe UI" if title else "Frappe UI - Design System for Frappe" }}
+            {%- endblock -%}
+        </title>
+        {%- block meta -%}
+        {%- endblock -%}
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <!-- Styles -->
+        <link href="{{ '/assets/frappe_design/css/' + ('style.dev.css' if developer_mode else 'style.prod.css') }}"
+            rel="stylesheet">
+
+        {%- endblock -%}
+    </head>
+
+    <body class="font-sans text-gray-900 antialiased">
+        {%- block body -%}
+        {%- include "templates/includes/navbar.html" ignore missing -%}
+        {%- block page_content -%}{%- endblock -%}
+        {%- include "templates/includes/footer.html" ignore missing -%}
+        {%- endblock -%}
+        {%- block scripts -%}{%- endblock -%}
+    </body>
+</html>

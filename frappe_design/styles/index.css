@@ -1,0 +1,111 @@
+/* purgecss start ignore */
+@import './code.css';
+@tailwind base;
+@tailwind components;
+
+pre[class*='language-'] {
+    background-color: theme('colors.black');
+    border-bottom-left-radius: theme('borderRadius.lg');
+    border-bottom-right-radius: theme('borderRadius.lg');
+    margin-top: 0;
+}
+
+code:not([class*="language-"]) {
+    background-color: theme('colors.indigo.100');
+    color: theme('colors.indigo.600');
+    padding: 0.125rem theme('spacing.1');
+    border-radius: theme('borderRadius.sm');
+    font-size: theme('fontSize.sm');
+}
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+/* purgecss start ignore */
+.from-markdown {
+  @apply text-gray-900;
+  @apply leading-relaxed;
+  @apply py-20;
+
+  > * + * {
+    @apply mt-6;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  ul,
+  ol {
+    @apply pl-10;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li > * + * {
+    @apply mt-4;
+  }
+
+  > ul > * + *,
+  > ol > * + * {
+    @apply mt-4;
+  }
+
+  > blockquote {
+    @apply text-gray-900 px-6 py-4 border border-l-4 border-gray-800 text-lg;
+  }
+
+  > h1 {
+    @apply text-3xl;
+    @apply mt-16;
+    @apply mb-4;
+    @apply leading-none;
+    @apply font-bold;
+  }
+
+  > h2 {
+    @apply mt-16;
+    @apply mb-4;
+    @apply leading-none;
+    @apply font-bold;
+    @apply text-2xl;
+  }
+
+  > h3 {
+    @apply mt-16;
+    @apply mb-4;
+    @apply leading-none;
+    @apply font-bold;
+    @apply text-xl;
+  }
+
+  > a,
+  > p a,
+  > ul li a,
+  > ol li a {
+    @apply border-b border-gray-800;
+    &:hover {
+      @apply text-gray-700;
+    }
+  }
+
+  tr > td,
+  tr > th {
+    @apply px-4 py-2 border border-gray-800;
+  }
+
+  th:empty {
+    display: none;
+  }
+
+  img {
+    @apply border border-gray-800;
+  }
+}
+/* purgecss end ignore */

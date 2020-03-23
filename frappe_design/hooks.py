@@ -35,7 +35,7 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "index"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -50,6 +50,10 @@ app_license = "MIT"
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
+
+update_website_context = ["frappe_design.website_context.get_context"]
+
+look_for_sidebar_json = True
 
 # Installation
 # ------------
