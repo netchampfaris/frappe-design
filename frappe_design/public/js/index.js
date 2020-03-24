@@ -36,4 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	Prism.highlightAllUnder(document.querySelector('.from-markdown'));
+
+	// colors
+	Array.from(document.querySelectorAll('[data-color]')).forEach(el => {
+		Array.from(el.children).forEach(child => {
+			let shade = child.querySelector('.w-12');
+			let rgb = getComputedStyle(shade).backgroundColor;
+            let rgbInArray = rgb.match(/([0-9]+)/g).map(d => parseInt(d, 10));
+            let hexCode = rgbToHex.apply(null, rgbInArray);
+			child.querySelector('code[data-hex-code]').textContent = hexCode;
+		});
+	});
 });
+
+function rgbToHex(r, g, b) {
+	return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function componentToHex(c) {
+	var hex = c.toString(16);
+	return hex.length == 1 ? '0' + hex : hex;
+}

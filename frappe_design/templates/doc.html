@@ -2,6 +2,7 @@
 
 {%- block body -%}
 <div class="flex h-screen">
+    {%- if sidebar_items -%}
     <aside class="hidden sm:block w-64 bg-gray-200">
         <div class="px-2 py-4">
             <input
@@ -10,7 +11,7 @@
                 placeholder="Search" />
         </div>
         {%- for item in sidebar_items -%}
-        <ul class="mt-2 px-2">
+        <ul class="mt-1 px-2">
             <li>
                 <a class="block px-4 py-2 rounded-md text-sm font-semibold {{ 'bg-white' if route == item.route.lstrip('/') else 'hover:bg-gray-100' }}"
                     href="{{ item.route }}">
@@ -32,13 +33,14 @@
         </ul>
         {%- endfor -%}
     </aside>
+    {%- endif -%}
     <div class="flex-1 overflow-auto">
         <header class="sticky top-0 bg-white z-10">
             <div class="container">
                 <nav class="flex justify-between py-4 border-b">
                     <a href="/" class="font-bold">
 
-                        Frappe UI
+                        Frappe Design
                     </a>
                     <div>
                         <a href="https://github.com/frappe/ui">GitHub</a>

@@ -1,0 +1,18 @@
+[
+	{
+		"title": "Overview",
+		"route": "/brand"
+	},
+	{
+		"title": "Color",
+		"route": "/brand/color"
+	},
+	{
+		"title": "Typography",
+		"route": "/brand/typography"
+	},
+	{
+		"title": "Logos",
+		"route": "/brand/logos"
+	}
+]
