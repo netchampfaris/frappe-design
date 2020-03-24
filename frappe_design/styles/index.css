@@ -11,8 +11,8 @@ pre[class*='language-'] {
 }
 
 code:not([class*="language-"]) {
-    background-color: theme('colors.indigo.100');
-    color: theme('colors.indigo.600');
+    background-color: theme('colors.gray.100');
+    color: theme('colors.gray.900');
     padding: 0.125rem theme('spacing.1');
     border-radius: theme('borderRadius.sm');
     font-size: theme('fontSize.sm');
@@ -85,10 +85,8 @@ code:not([class*="language-"]) {
     @apply text-xl;
   }
 
-  > a,
-  > p a,
-  > ul li a,
-  > ol li a {
+
+  a[href] {
     @apply border-b border-gray-800;
     &:hover {
       @apply text-gray-700;
