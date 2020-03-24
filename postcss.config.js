@@ -12,7 +12,12 @@ module.exports = {
 		tailwindcss(path.resolve(__dirname, './tailwind.config.js')),
 		production
 			? purgecss({
-					content: ['./frappe_design/**/*.html', './frappe_design/**/*.md'],
+					content: [
+						'./frappe_design/**/*.html',
+						'./frappe_design/**/*.md',
+						'./frappe_design/**/*.vue',
+						'./frappe_design/**/*.js',
+					],
 					defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 			  })
 			: null,
