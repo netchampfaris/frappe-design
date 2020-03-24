@@ -14,12 +14,19 @@
     v-on="$listeners"
     :disabled="disabled"
   >
+    <FeatherIcon v-if="iconLeft" :name="iconLeft" class="mr-2 w-4 h-4" />
     <slot></slot>
+    <FeatherIcon v-if="iconRight" :name="iconRight" class="ml-2 w-4 h-4" />
   </button>
 </template>
 <script>
+import FeatherIcon from '../FeatherIcon';
+
 export default {
   name: 'Button',
+  components: {
+    FeatherIcon
+  },
   props: {
     type: {
       type: String,
@@ -28,6 +35,14 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    iconLeft: {
+      type: String,
+      default: null
+    },
+    iconRight: {
+      type: String,
+      default: null
     }
   }
 };
